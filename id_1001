@@ -8,3 +8,17 @@ int main(){
 		cout<<(a+b)*b/2;}
 	return 0;
 }
+//id=1001 this is true,of course ,i don't know why
+#include<iostream>
+using namespace std;
+int main(){
+    int b,sum=0;
+    while(cin>>b){
+        for(int i=1;i<=b;i++){
+            sum+=i;
+        }
+        cout<<sum<<endl<<endl;
+        sum=0;
+    }
+    return 0;
+}
