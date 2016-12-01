@@ -1,0 +1,10 @@
+//id=1001 this is a wrong answer,and i don't know why
+#include<iostream>
+using namespace std;
+int main(){
+	int a,b;
+	while(cin>>a&&cin>>b){
+		cout<<a<<endl<<endl;
+		cout<<(a+b)*b/2;}
+	return 0;
+}
