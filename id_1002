@@ -1,0 +1,61 @@
+#include<iostream>
+using namespace std;
+int main() {
+	char a[1001] = { 0 }, b[1001] = { 0 }, c[1001] = { 0 }, d[1001] = { 0 };//刚开始用的1000，完全忘了字符串最后一位的事，我个笨蛋！
+	int e[1001],g[1001];
+	int m, n;
+	cin >> a;
+	cin >> b;
+	int a1 = strlen(a);
+	int b1 = strlen(b);
+	if (a1 > b1) {
+		m = a1;
+		n = b1;
+		for (int i = 1; i <= m; i++) {
+			c[i] = a[m - i];
+			//cout << c[i];//this is a test
+		}
+		for (int j = 1; j <= n; j++) {
+			d[j] = b[n - j];
+			//cout << d[j];//thia is a test
+		}
+		for (int i = n + 1; i <= m; i++)
+			d[i] = '0';
+		//for (int i = 0; i <= m; i++)//test
+		//	cout << d[i];//test
+	}else {
+		m = b1;
+		n = a1;
+		for (int i = 1; i <= n; i++) {
+			c[i] = a[n - i];
+			//cout << c[i];//this is a test
+		}
+		for (int j = 1; j <= m; j++) {
+			d[j] = b[m - j];
+			//cout << d[j];//thia is a test
+		}
+		for (int i = n + 1; i <= m; i++)
+			c[i] = '0';
+		//for (int i = 0; i <= m; i++)//test
+			//cout << c[i];//test
+	}
+	//以上代码没有错误，只需要修改下面的
+	for (int k = 1; k <= m;k++) {
+		e[k] = c[k] + d[k] - '0' - '0';
+		//cout << e[k];//this is a test
+		}
+	for (int i = 0; i < m; i++) {
+		g[i] = e[m - i];
+		cout << g[i];//this is a test
+	}
+	//以上代码没有错误，只需要修改下面的
+	for (int i = m-1; i >= 1; i++) {
+		if (e[i] >= 10) {
+			e[i] -= 10;
+			e[i - 1] += 1;
+			cout << e[i];
+		}
+	}
+	system("pause");
+
+}
