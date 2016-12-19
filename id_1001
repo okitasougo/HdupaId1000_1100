@@ -1,4 +1,7 @@
-//id=1001 this is a wrong answer,and i don't know why
+//id=1001 this is a wrong answer beause of undestanding problem description wrongly
+//in the problem description,each input is the series of integers n
+//so the input case is line by line
+//but this wrong code regard "a" as start point and "b" as end point
 #include<iostream>
 using namespace std;
 int main(){
